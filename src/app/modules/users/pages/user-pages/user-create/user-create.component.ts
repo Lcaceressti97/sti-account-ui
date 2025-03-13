@@ -284,6 +284,10 @@ export class UserCreateComponent implements OnInit {
     window.history.back();
   }
 
-
+  onCompanySelectionChanged(event: { selectedRowsData: any; }) {
+    const selectedRows = event.selectedRowsData;
+    console.log('Filas seleccionadas en Empresas:', selectedRows);
+    // Aquí puedes agregar lógica adicional si es necesario
+  }
 
 }

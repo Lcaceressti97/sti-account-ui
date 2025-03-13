@@ -122,6 +122,7 @@ export class ProviderListComponent {
         id: item.id,
         document: item.reference,
         dateAt: item.date,
+        creationDate: new Date(item.creationDate),
         status:
           item.status.toUpperCase() === 'DRAFT' ? 'Borrador' : 'Publicado',
         description: item.description,

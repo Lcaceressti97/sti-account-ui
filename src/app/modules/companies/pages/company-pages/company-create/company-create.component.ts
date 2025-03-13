@@ -195,7 +195,7 @@ export class CompanyCreateComponent implements OnInit {
 
     if (this.companyForm.users.length == 0) {
       this.toastType = typeToast.Error;
-      this.messageToast = 'Seleccione al menos un Usario';
+      this.messageToast = 'Seleccione al menos un Usuario';
       this.showToast = true;
       return
     }
@@ -324,7 +324,9 @@ export class CompanyCreateComponent implements OnInit {
     }
   }
 
-
+  onSelectionChanged(event: { selectedRowsData: any; }) {
+    const selectedRows = event.selectedRowsData;
+  }
 
 
 }

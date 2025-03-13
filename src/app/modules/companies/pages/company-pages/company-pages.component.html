@@ -4,10 +4,10 @@
   <dx-data-grid id="companiesGrid" [showBorders]="true" [dataSource]="companyList$ | async">
     <dxi-column caption="Nombre" dataField="name"></dxi-column>
     <dxi-column caption="Tipo" dataField="type"></dxi-column>
-    <dxi-column caption="Rtn" dataField="rtn"></dxi-column>
+    <dxi-column caption="RTN" dataField="rtn"></dxi-column>
     <dxi-column caption="Estado" dataField="active"></dxi-column>
     <dxi-column
-      caption="Creado"
+      caption="Fecha de Creación"
       dataField="createdAt"
       dataType="date"
     ></dxi-column>
@@ -28,11 +28,11 @@
                 <div><span class="font-medium">Dirección:</span> {{company.data.address}}</div>
                 <div><span class="font-medium">Teléfono:</span> {{company.data.phone}}</div>
                 <div><span class="font-medium">Correo Electrónico:</span> <a 
-                   class="text-blue-600 hover:underline">{{company.data.email}}</a></div>
+                   class="text-blue-600 hover:underline"> {{company.data.email}}</a></div>
                 <div><span class="font-medium">RTN:</span> {{company.data.rtn}}</div>
                 <div><span class="font-medium">Tipo:</span> {{company.data.type}}</div>
-                <div><span class="font-medium">Sitio Web:</span>{{company.data.website}}</div>
-                <div><span class="font-medium">Estado:</span> <span class="text-red-500">{{company.data.active ?'activa':'inactiva' }}</span></div>
+                <div><span class="font-medium">Sitio Web:</span> {{company.data.website}}</div>
+                <div><span class="font-medium">Estado:</span> <span class="text-red-500"> {{company.data.active ?'ACTIVA':'INACTIVA' }}</span></div>
             </div>
         </div>
     
