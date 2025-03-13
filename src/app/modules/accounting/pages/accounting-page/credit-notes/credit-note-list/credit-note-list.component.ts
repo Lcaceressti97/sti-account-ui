@@ -125,7 +125,7 @@ export class CreditNoteListComponent {
         this.transactionService.putAllCreditNotes(this.selectRows).subscribe({
           next: (data) => {
             this.toastType = typeToast.Success;
-            this.messageToast = 'Notas de Credito confirmadas con exito';
+            this.messageToast = 'Notas de Créditos confirmadas con exito';
             this.showToast = true;
 
             setTimeout(() => {
@@ -134,7 +134,7 @@ export class CreditNoteListComponent {
           },
           error: (err) => {
             this.toastType = typeToast.Error;
-            this.messageToast = 'Error al intentar confirmar Notas de Creditos';
+            this.messageToast = 'Error al intentar confirmar Notas de Créditos';
             this.showToast = true;
           },
         });
