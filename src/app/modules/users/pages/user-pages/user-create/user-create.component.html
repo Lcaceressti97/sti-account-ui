@@ -111,13 +111,14 @@
 
       </div>
 
+      <br>
       <fieldset class="flex border rounded-sm w-full gap-2 gap-x-3 p-2 col-span-3">
         <legend class="font-medium ml-2">Empresas</legend>
         <dx-data-grid id="companyUser Grid" [showBorders]="true" [dataSource]="companyList$" 
                        [selection]="{ mode: 'single' }" (onSelectionChanged)="onCompanySelectionChanged($event)">
           <dxo-paging [enabled]="false"></dxo-paging>
           <dxo-group-panel [visible]="false"></dxo-group-panel>
-          <dxo-editing mode="cell" [allowUpdating]="true" [allowAdding]="true" [allowDeleting]="false">
+          <dxo-editing mode="cell" [allowUpdating]="true" [allowAdding]="false" [allowDeleting]="false">
           </dxo-editing>
           
           <dxi-column caption="Nombre" dataField="name" [allowEditing]="false"></dxi-column>
@@ -139,15 +140,16 @@
         </dx-data-grid>
       </fieldset>
 
+      <br>
       <fieldset class="flex border rounded-sm w-full gap-2 gap-x-3 p-2 col-span-3">
         <legend class="font-medium ml-2">Roles Globales</legend>
         <dx-data-grid id="companyUserGrid" [showBorders]="true" [dataSource]="rolesGlobals$">
           <dxo-paging [enabled]="false"></dxo-paging>
           <dxo-group-panel [visible]="false"></dxo-group-panel>
-          <dxo-editing mode="row" [allowUpdating]="true" [allowAdding]="true" [allowDeleting]="true">
+          <dxo-editing mode="row" [allowUpdating]="false" [allowAdding]="false" [allowDeleting]="false">
           </dxo-editing>
           <dxi-column caption="Nombre" dataField="name"></dxi-column>
-          <dxi-column caption="Permiso" dataField="globalRoles" [width]="100" cellTemplate="cellTemplate">
+          <dxi-column caption="Asignar Permiso" dataField="globalRoles" [width]="150" cellTemplate="cellTemplate">
           </dxi-column>
           <div *dxTemplate="let data of 'cellTemplate'">
             <label class="inline-flex items-center cursor-pointer">

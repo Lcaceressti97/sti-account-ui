@@ -7,9 +7,9 @@
      
         <div class="flex flex-col items-center space-y-4">
           <div class="w-60 h-auto">
-            <!-- <img *ngIf="imagePreview" [src]="imagePreview" alt="image description" class="h-auto w-full rounded-lg shadow-lg" />
-            <img *ngIf="!imagePreview" class="h-auto w-60 rounded-lg" src="assets/image-1@2x.jpg" alt="image description" /> -->
-            <img [src]="apiLogo + id" alt="Logo"  class="h-auto w-full rounded-lg shadow-lg" >
+             <img *ngIf="imagePreview" [src]="imagePreview" alt="image description" class="h-auto w-full rounded-lg shadow-lg" />
+            <img *ngIf="!imagePreview" class="h-auto w-60 rounded-lg" src="assets/image-1@2x.jpg" alt="image description" /> 
+          <!--   <img [src]="apiLogo + id" alt="Logo"  class="h-auto w-full rounded-lg shadow-lg" > -->
           </div>
       
           <label class="flex flex-col items-center justify-center w-60 px-4 py-2 bg-gray-100 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer hover:bg-gray-200 hover:border-gray-400 transition-all duration-200">
@@ -126,11 +126,11 @@
           <label for="accountConfig" class="block mb-2 text-sm text-gray-900">Configuración de Cuentas:</label>
           <select required="true" name="accountConfig" id="accountConfig" (change)="onAccountConfig($event)"
             class="border block w-full p-1.5 border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 focus:outline-none">
-            <option value="2">No Configurar Cuentas</option>
-            <option selected value="1">Usar Cuentas del Sistema</option>
-            <option value="0">Copiar de Empresa</option>
+            <option value="1">Usar Cuentas del Sistema</option>
+            <option value="0">No Configurar Cuentas</option>
+            <option value="2">Copiar de Empresa</option>
           </select>
-          @if(!accountsFromSystem) {
+          @if(accountsFromSystem === 2) {
           <div class="form w-full">
             <label for="copyFromSelect" class="block mb-2 text-sm text-gray-900"></label>
             <select required name="tenantId" id="tenantId" class="bg-gray-50 border

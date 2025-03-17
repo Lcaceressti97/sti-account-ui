@@ -127,6 +127,13 @@ export class UserCreateComponent implements OnInit {
   
 
   onSubmit(e: NgForm){
+    if (!e.valid) {
+      this.toastType = typeToast.Error;
+      this.messageToast = 'Por favor, complete todos los campos requeridos.';
+      this.showToast = true;
+      return;
+    }
+    
     if (this.id) {
       this.update(e)
     }else{
